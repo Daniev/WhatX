@@ -1,0 +1,48 @@
+/* Structured from the biggest container down to the smallest. Styling for the workoutComponent. */
+
+
+.WorkoutContainer{
+    background-color: azure;
+    border-right: 3rem;
+    text-align: center;
+}
+
+
+.WorkoutName
+{
+
+}
+
+.ExerciseContainer{
+    display: inline-block;
+    background-color:cadetblue;
+    padding-top: 0.2%;
+    border-style: solid;
+    border-width: 2%; 
+    border-color: cornflowerblue;
+    border-radius: 4%;
+    margin: 5%;
+    
+    /* vertical-align: middle; */
+    align-items: center;
+}   
+
+.ExerciseName{
+
+}
+
+.ExerciseRepList
+{
+    padding: 5%;
+    background-color: cornflowerblue;
+
+}
+
+.ExerciseRepListElement{
+ border-color: cornflowerblue;
+ border-style: solid;
+ border-width: 1%;  
+ margin: 3%;
+ padding: 5%;
+ background-color: azure;
+}

@@ -1,5 +1,6 @@
 import React from "react";
 import "../styles/WorkoutComponentStyle.css";
+import { workout } from "../test/examples";
 
 class RepsComponent extends React.Component {
   render() {
@@ -41,5 +42,42 @@ export class ViewWorkoutComponent extends React.Component {
         <ExerciseComponent exercises={this.props.workout.exercises} />
       </div>
     );
+  }
+}
+
+export class ViewWorkoutsComponent extends React.Component {
+  render() {
+    const workouts = this.props.workouts;
+    const workoutList = workouts.map((workout) => {
+      return <ViewWorkoutComponent workout={workout} />;
+    });
+    return <div>{workoutList}</div>;
+  }
+}
+
+/// For displaying summary of workouts.
+class WorkoutShortComponent extends React.Component {
+  // EditWorkout() {
+  //   console.log("Edit workout", this.props.workout);
+  //   alert("Edit workout", this.props.workout);
+  // }
+  render() {
+    const workout = this.props.workout;
+    return (
+      <div className="WorkoutOverview">
+        <h3>{workout.name}</h3>
+        {/* <button onClick={this.EditWorkout}>Edit</button> */}
+      </div>
+    );
+  }
+}
+
+export class OverviewWorkoutsComponent extends React.Component {
+  render() {
+    const workouts = this.props.workouts;
+    const workoutList = workouts.map((workout) => {
+      return <WorkoutShortComponent workout={workout} />;
+    });
+    return <div className="WorkoutsOverview">{workoutList}</div>;
   }
 }

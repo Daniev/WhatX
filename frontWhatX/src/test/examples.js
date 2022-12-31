@@ -48,3 +48,7 @@ export const workout = new GymWorkout("Test Workout 1", [
   ex_6,
   ex_7,
 ]);
+
+const w2 = new GymWorkout("Test Workout 2", [ex_2, ex_3, ex_4]);
+
+export const workouts = [workout, w2];

@@ -1,13 +1,13 @@
 // Page were one can view existing exercises..
 import React from "react";
-import { ViewWorkoutComponent } from "./WorkoutComponent";
-import { workout } from "../test/examples";
+import { ViewWorkoutsComponent } from "./WorkoutComponent";
+import { workouts } from "../test/examples";
 
 export const ViewPage = () => {
   return (
     <div className="ViewPageContainer">
       <h2>View Workouts!</h2>
-      <ViewWorkoutComponent workout={workout} />
+      <ViewWorkoutsComponent workouts={workouts} />
     </div>
   );
 };
